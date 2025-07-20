@@ -6,6 +6,9 @@
 		"ignoreUnknown": true
 	},
 	"linter": {
+		"rules": {
+			"recommended": true
+		},
 		"includes": ["src/**/*.js", "src/**/*.tsx"]
 	},
 	"formatter": {
@@ -24,7 +27,19 @@
 	},
 	"json": {
 		"parser": {
-			"allowComments": true
+			"allowComments": true,
+			"allowTrailingCommas": true
 		}
-	}
+	},
+	"overrides": [
+		{
+			"includes": [".vscode/**"],
+			"json": {
+				"parser": {
+					"allowComments": false,
+					"allowTrailingCommas": false
+				}
+			}
+		}
+	]
 }
