@@ -1,0 +1,30 @@
+{
+	"$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+	"files": {
+		"includes": ["**", "!**/*.test.js", "**/special.test.js", "!test"],
+		"experimentalScannerIgnores": ["lodash", "dist", "RedisCommander.d.ts"],
+		"ignoreUnknown": true
+	},
+	"linter": {
+		"includes": ["src/**/*.js", "src/**/*.tsx"]
+	},
+	"formatter": {
+		"includes": ["src/**/*.js", "src/**/*.tsx"],
+		"formatWithErrors": true
+	},
+	"javascript": {
+		"parser": {
+			"unsafeParameterDecoratorsEnabled": true
+		},
+		"formatter": {
+			"jsxQuoteStyle": "single",
+			"quoteProperties": "preserve",
+			"semicolons": "asNeeded"
+		}
+	},
+	"json": {
+		"parser": {
+			"allowComments": true
+		}
+	}
+}
